@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "61326037749",
+    "firebase_url": "https://radio-project-367d8.firebaseio.com",
+    "project_id": "radio-project-367d8",
+    "storage_bucket": "radio-project-367d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61326037749:android:dc8d11a2fbe9ff609a2bbc",
+        "android_client_info": {
+          "package_name": "com.rckdevs.radioapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61326037749-i40aahsfq6c1df1icorq628ljt6qs3uv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnjIQAJ4Ac_xDornYncPi8tDgygbFcZ8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61326037749-i40aahsfq6c1df1icorq628ljt6qs3uv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
