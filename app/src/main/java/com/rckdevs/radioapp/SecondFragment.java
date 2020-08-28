@@ -1,6 +1,7 @@
 package com.rckdevs.radioapp;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.media.MediaParser;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -18,6 +19,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.RequestCreator;
+
 public class SecondFragment extends Fragment {
 
     private ImageView imagePlayPause;
@@ -25,6 +29,8 @@ public class SecondFragment extends Fragment {
     private SeekBar playerSeekBar;
     private MediaPlayer mediaPlayer;
     private Handler handler = new Handler();
+
+    private ImageView imageLogo;
 
     @Override
     public View onCreateView(
@@ -41,6 +47,12 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 
         super.onViewCreated(view, savedInstanceState);
+
+        imageLogo = view.findViewById(R.id.imageLogo);
+
+        Picasso.with(SecondFragment.this).load("https://cdn.webrad.io/images/logos/radios-com-pa/los-40-principales-panama.png")
+        .placeholder(R.drawable.ic_broken).into(imageLogo);
+
 
         imagePlayPause = view.findViewById(R.id.imagePlayPause);
         texCurrentTime =  view.findViewById(R.id.textCurrentTime);
@@ -126,7 +138,7 @@ public class SecondFragment extends Fragment {
             mediaPlayer.prepare();
             textTotalDuration.setText(milliSecondsToTimer(mediaPlayer.getDuration()));
         } catch (Exception ex){
-            //Toast.makeText(this, ex.getMessage().toString(), Toast.LENGTH_SHORT).show(); //LINEA CON ERROR
+            Toast.makeText(SecondFragment, ex.getMessage().toString(), Toast.LENGTH_SHORT).show(); //LINEA CON ERROR
         }
     }
 

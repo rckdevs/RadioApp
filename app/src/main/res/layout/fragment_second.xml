@@ -7,6 +7,13 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".SecondFragment">
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
     
     <ImageView
         android:id="@+id/imagePlayPause"
